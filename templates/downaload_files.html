@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Files</title>
+</head>
+<body>
+    <h1>Download Files</h1>
+    <ul>
+        {% for filename in files %}
+        <li><a href="{{ url_for('download_file', session_id=session_id, filename=filename) }}">{{ filename }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

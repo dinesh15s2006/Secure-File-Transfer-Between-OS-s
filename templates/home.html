@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome, {{ email }}!</h1>
+
+    <h2>Upload Files to Share</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="files" multiple><br><br>
+        <input type="submit" value="Upload and Generate QR Code">
+    </form>
+
+    {% if qr_image %}
+    <h2>Scan this QR code to download the files:</h2>
+    <img src="{{ qr_image }}" alt="QR Code">
+    <p>Or use this link: <a href="{{ transfer_url }}">{{ transfer_url }}</a></p>
+    {% endif %}
+
+    <p><a href="{{ url_for('logout') }}">Logout</a></p>
+</body>
+</html>

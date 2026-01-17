@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Devices - File Sharing App</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Scan Devices & Transfer</h1>
+            <nav>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/scan_devices">Scan Devices</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <p>This page is a placeholder. The device discovery and connection are initiated after you select files on the <a href="/home">Home</a> page.</p>
+            <div class="scanning-animation" style="margin-top: 20px;">
+                <div class="scan-line"></div>
+                <p class="scanning-text">Visually indicating a scan for devices...</p>
+            </div>
+            <div class="devices-list" style="margin-top: 20px;">
+                <h2>Detected Devices</h2>
+                <ul id="detected-devices">
+                    <li>(Placeholder for detected devices)</li>
+                </ul>
+            </div>
+            <p>Other devices can connect by scanning the QR code or using the link shown on the Home page after you select files.</p>
+        </main>
+        <footer>
+            <p>&copy; 2025 File Sharing App</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="static/script.js"></script>
+</body>
+</html>
